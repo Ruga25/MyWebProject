@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajr.com</title>
+
+    <style>
+        /* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eeebeb;
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar .logo h1 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.navbar .nav-links li a:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.navbar .nav-links li a:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.navbar .nav-links li a:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Hamburger Menu for Mobile */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    background-color: #ffffff;
+    height: 4px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        display: none;
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navbar .nav-links li a {
+        font-size: 18px;
+    }
+}
+
+/* Animation for Navbar Links */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Coming Soon Section */
+header {
+    margin-top: 100px;
+    text-align: center;
+}
+
+header h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Countdown Timer */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.countdown div {
+    text-align: center;
+}
+
+.countdown span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>AJR</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/all/html/Home.html">Home</a></li>
+            <li><a href="/all/html/about.html">About</a></li>
+            <li><a href="/all/html/5_contactus.html">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span><span></span><span></span> <!-- Hamburger icon -->
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <header>
+        <h2>Coming Soon</h2>
+        <p>We are working hard to bring something amazing to you. Stay tuned!</p>
+    </header>
+
+    <!-- Countdown Timer -->
+    <div class="countdown">
+        <div>
+            <span id="days">00</span>
+            Days
+        </div>
+        <div>
+            <span id="hours">00</span>
+            Hours
+        </div>
+        <div>
+            <span id="minutes">00</span>
+            Minutes
+        </div>
+        <div>
+            <span id="seconds">00</span>
+            Seconds
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Countdown timer function
+const countdown = () => {
+    const launchDate = new Date("2025-12-31T00:00:00").getTime();
+    const now = new Date().getTime();
+    const timeLeft = launchDate - now;
+
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    document.getElementById('days').textContent = days;
+    document.getElementById('hours').textContent = hours;
+    document.getElementById('minutes').textContent = minutes;
+    document.getElementById('seconds').textContent = seconds;
+};
+
+setInterval(countdown, 1000);
+
+// Hamburger Menu Toggle
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+    </script>
+</body>
+</html>

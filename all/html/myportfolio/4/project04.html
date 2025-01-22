@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AJRuga.com - Showcase your skills and projects. Explore various categories like Web Development, AI, Networking, and more!">
+    <meta name="keywords" content="AJR, portfolio, web development, AI, projects, responsive design, interactive UI">
+    <meta name="author" content="AJR Company">
+    <meta name="robots" content="index, follow">
+        <title>AJRuga.com - Portfolio</title>
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+
+
+
+
+
+    
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #af6e6e;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #333;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input {
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            width: 250px;
+            transition: width 0.3s ease;
+        }
+
+        .search-bar button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #d35400;
+        }
+
+        .hero {
+            background: url('/pictures/hero-background.jpg') center/cover no-repeat;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .content {
+            padding: 20px 30px;
+        }
+
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .movie-card {
+            background-color: rgb(58, 90, 197);
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .movie-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .movie-card h3 {
+            margin: 10px;
+            font-size: 18px;
+            text-align: center;
+            color: aliceblue;
+        }
+
+        .movie-card p {
+            margin: 10px;
+            color: #fffafa;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .notification {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f39c12;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            z-index: 9999;
+            width: 80%;
+            max-width: 400px;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.5s linear;
+        }
+
+        .notification.show {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .search-bar input {
+                width: 200px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .movie-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .movie-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    /* CSS for no-underline class */
+    .no-underline {
+        text-decoration: none; /* Removes default underline */
+        border-bottom: 2px solid blue; /* Adds a blue bottom border */
+        color: blue; /* Sets the text color */
+        padding-bottom: 2px; /* Adds spacing below the text for better alignment */
+    }
+
+    .no-underline:hover {
+        border-bottom: 2px solid darkblue; /* Changes border color on hover for effect */
+        color: darkblue; /* Optional: Darkens the text color on hover */
+    }
+</style>
+
+
+
+
+
+
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">AJR</div>
+        <nav>
+            <ul>
+                <li><a href="/all/html/Home.html">Home</a></li>
+                <li><a href="/all/html/5_contactus.html">Contact US</a></li>
+            </ul>
+
+
+        </nav>
+        <div class="search-bar">
+            <input id="search-input" type="text" placeholder="Search for projects..." aria-label="Search projects" oninput="searchMovies()">
+            <button onclick="searchMovies()">
+                <span class="material-symbols-outlined">search</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="content">
+            <h1 class="animate__animated animate__fadeInDown">Artificial Intelligence</h1>
+        </div>
+    </section>
+    
+    <div class="no-results" id="no-results" style="display: none; text-align: center;">
+        <h1 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); font-size: 24px; color: white;">No found (AJR)</h1>
+    </div>
+
+    <!-- Notification Section -->
+    <div class="notification" id="notification">Hover over or click a card to see its name!</div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="movie-grid" id="movieGrid">
+            <div class="movie-card" data-title="Chatbot for Customer Support" onmouseenter="showNotification(this)" onclick="showNotification(this)">
+                <a href="/all/html/comingsoon.html">
+                    <img src="/all/pictures/B_gr1.png" alt="Chatbot for Customer Support" >
+                </a>
+                <a href="/all/html/comingsoon.html" class="no-underline">
+                <h3>Chatbot for Customer Support</h3></a>
+                <p>The project is still in progress and has not been completed.</p>
+            </div>
+
+            <div class="movie-card" data-title="AI-Powered Recommendation System" onmouseenter="showNotification(this)" onclick="showNotification(this)">
+                <a href="/all/html/comingsoon.html">
+                    <img src="/all/pictures/B_gr1.png" alt="AI-Powered Recommendation System" >
+                </a>
+                <a href="/all/html/comingsoon.html" class="no-underline">
+                    <h3>AI-Powered Recommendation System</h3>
+                </a>
+                <p>The project is still in progress and has not been completed.</p>
+            </div>
+
+            <div class="movie-card" data-title="Image Recognition and Classification" onmouseenter="showNotification(this)" onclick="showNotification(this)">
+                <a href="/all/html/comingsoon.html">
+                    <img src="/all/pictures/B_gr1.png" alt="Image Recognition and Classification" >
+                </a>
+                <a href="/all/html/comingsoon.html" class="no-underline">
+                <h3>Image Recognition and Classification</h3></a>
+                <p>The project is still in progress and has not been completed.</p>
+            </div>
+            <div class="movie-card" data-title="Sentiment Analysis Tool" onmouseenter="showNotification(this)" onclick="showNotification(this)">
+                <a href="/all/html/comingsoon.html">
+                    <img src="/all/pictures/B_gr1.png" alt="Sentiment Analysis Tool" >
+                </a>
+                <a href="/all/html/comingsoon.html" class="no-underline">
+                <h3>Sentiment Analysis Tool</h3></a>
+                <p>The project is still in progress and has not been completed.</p>
+            </div>
+            <div class="movie-card" data-title="Speech-to-Text Converter" onmouseenter="showNotification(this)" onclick="showNotification(this)">
+                <a href="/all/html/comingsoon.html">
+                    <img src="/all/pictures/B_gr1.png" alt="Speech-to-Text Converter" >
+                </a>
+                <a href="/all/html/comingsoon.html" class="no-underline">
+                <h3>Speech-to-Text Converter</h3></a>
+                <p>The project is still in progress and has not been completed.</p>
+            </div>
+            <div class="movie-card" data-title="Autonomous Driving Simulation" onmouseenter="showNotification(this)" onclick="showNotification(this)">
+                <a href="/all/html/comingsoon.html">
+                    <img src="/all/pictures/B_gr1.png" alt="Autonomous Driving Simulation">
+                </a>
+                <a href="/all/html/comingsoon.html" class="no-underline">
+                <h3>Autonomous Driving Simulation</h3></a>
+                <p>The project is still in progress and has not been completed.</p>
+            </div>
+            <div class="movie-card" data-title="Fraud Detection System" onmouseenter="showNotification(this)" onclick="showNotification(this)">
+                <a href="/all/html/comingsoon.html">
+                    <img src="/all/pictures/B_gr1.png" alt="Fraud Detection System" >
+                </a>
+                <a href="/all/html/comingsoon.html" class="no-underline">
+                <h3>Fraud Detection System</h3></a>
+                <p>The project is still in progress and has not been completed.</p>
+            </div>
+
+            <div class="movie-card" data-title="AI-Powered Virtual Assistant" onmouseenter="showNotification(this)" onclick="showNotification(this)">
+                <a href="/all/html/comingsoon.html">
+                    <img src="/all/pictures/B_gr1.png" alt="AI-Powered Virtual Assistant" >
+                </a>
+                <a href="/all/html/comingsoon.html" class="no-underline">
+                <h3>AI-Powered Virtual Assistant</h3></a>
+                <p>The project is still in progress and has not been completed.</p>
+            </div>
+
+            <div class="movie-card" data-title="AI for Predictive Maintenance" onmouseenter="showNotification(this)" onclick="showNotification(this)">
+                <a href="/all/html/comingsoon.html">
+                    <img src="/all/pictures/B_gr1.png" alt="AI for Predictive Maintenance" >
+                </a>
+                <a href="/all/html/comingsoon.html" class="no-underline">
+                <h3>AI for Predictive Maintenance</h3></a>
+                <p>The project is still in progress and has not been completed.</p>
+            </div>
+
+            <div class="movie-card" data-title="Medical Diagnosis System" onmouseenter="showNotification(this)" onclick="showNotification(this)">
+                <a href="/all/html/comingsoon.html">
+                    <img src="/all/pictures/B_gr1.png" alt="Medical Diagnosis System" >
+                </a>
+                <a href="/all/html/comingsoon.html" class="no-underline">
+                <h3>Medical Diagnosis System</h3></a>
+                <p>The project is still in progress and has not been completed.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 AJR. All rights reserved. <a href="/privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        function showNotification(element) {
+            const title = element.getAttribute('data-title');
+            const notification = document.getElementById('notification');
+            notification.textContent = title || "No title available";
+            notification.classList.add('show');
+
+            // Hide the notification after 2 seconds
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 2000);
+        }
+
+        function searchMovies() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const movies = document.querySelectorAll('.movie-card');
+            let found = false;
+
+            movies.forEach(movie => {
+                const title = movie.getAttribute('data-title').toLowerCase();
+                if (title.includes(query)) {
+                    movie.style.display = 'block';
+                    found = true;
+                } else {
+                    movie.style.display = 'none';
+                }
+            });
+
+            document.getElementById('notification').textContent = found ? "Results updated!" : "No matching results found!";
+        }
+    </script>
+    <script>
+        function searchMovies() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const movies = document.querySelectorAll('.movie-card');
+            const noResults = document.getElementById('no-results');
+            let found = false;
+
+            movies.forEach(movie => {
+                const title = movie.getAttribute('data-title').toLowerCase();
+                if (title.includes(query)) {
+                    movie.style.display = 'block';
+                    found = true;
+                } else {
+                    movie.style.display = 'none';
+                }
+            });
+
+            noResults.style.display = found ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>

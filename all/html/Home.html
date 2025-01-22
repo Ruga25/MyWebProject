@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(90deg, #1877f2, #ff0000, #f09433, #4285f4);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #ffd700;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('/all/pictures/B_gr1.png') no-repeat center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background: #4285f4;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .hero button:hover {
+            background: #34a853;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #1c2fddbd;
+        }
+
+        .section p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #1555dd;
+        }
+
+        .section .platform-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .platform-icons a {
+            font-size: 40px;
+            color: #8a2222;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .platform-icons a:hover {
+            color: #000;
+            transform: scale(1.2);
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 20px 10px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section h2 {
+                font-size: 24px;
+            }
+
+            .section p {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .hero button {
+                font-size: 16px;
+            }
+
+            .platform-icons a {
+                font-size: 30px;
+            }
+        }
+    </style>
+     <style>
+         
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f9;
+                color: #333;
+            }
+    
+            .section {
+                text-align: center;
+                padding: 40px 20px;
+                margin: 20px;
+                background-color: #ffffff;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+    
+            .section:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+    
+            h2 {
+                font-size: 24px;
+                margin-bottom: 10px;
+                color: #007BFF;
+            }
+    
+            h2:hover {
+                text-decoration: underline;
+            }
+    
+            p {
+                font-size: 16px;
+                color: #555;
+            }
+    
+            .no-underline {
+                text-decoration: none;
+                color: inherit;
+            }
+    
+            /* Animation */
+            .section {
+                animation: fadeIn 1s ease-in;
+            }
+    
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+    
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .section {
+                    padding: 30px 15px;
+                }
+    
+                h2 {
+                    font-size: 20px;
+                }
+    
+                p {
+                    font-size: 14px;
+                }
+            }
+        
+     </style>
+
+
+
+
+
+
+
+
+
+    <style>
+        .no-underline {
+    text-decoration: none; /* Removes the underline */
+    color: inherit;        /* Inherits the text color from the parent */
+}
+
+.no-underline:hover {
+    color: blue;           /* Adds a hover effect to make it interactive */
+    text-decoration: underline; /* Optionally underline on hover for clarity */
+}
+
+    </style>
+
+
+
+
+
+
+
+
+</head>
+
+
+
+<body>
+    
+    <!-- Header Section -->
+    <header>
+        <div class="logo">AJR</div>
+        <nav class="nav">
+            <a href="/all/html/4_software.html">Software</a>
+            <a href="/all/html/myportfolio/portfolio.html">Portfolio</a>
+            <a href="/all/html/3_fire.html">My Fair</a>
+            <a href="/all/html/about.html">About</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1>Welcome to My Media</h1>
+            <a href="/index.html" class="no-underline">
+                <button>Explore</button>
+            </a>
+            
+        </div> 
+    </section>
+
+    <!-- Content Sections -->
+    <section class="section" id="My Portfolio">
+        <a href="/all/html/myportfolio/portfolio.html" class="no-underline">
+            <h2>My Portfolio</h2>
+        </a>
+        <p>Watch it and stay entertained.</p>
+    </section>
+
+
+
+        <!-- Content Sections -->
+
+    
+        <section class="section" id="My Fair">
+            <a href="/all/html/3_fire.html" class="no-underline">
+                <h2>My Fair</h2>
+            </a>
+            <p>Find answers to your questions with the power of My Fair.</p>
+        </section>
+    
+        <section class="section" id="Software">
+            <a href="/all/html/4_software.html" class="no-underline">
+                <h2>Software</h2>
+            </a>
+            <p>Connect with friends and share your moments.</p>
+        </section>
+    
+        <section class="section" id="Designs">
+            <a href="/all/html/6_Design.html" class="no-underline">
+                <h2>Designs</h2>
+            </a>
+            <p>Explore Designs from around the world.</p>
+        </section>
+    
+        <section class="section" id="Videos">
+            <a href="/all/Movies/index.html" class="no-underline">
+                <h2>Videos</h2>
+            </a>
+            <p>Explore videos, and stories from around the world.</p>
+        </section>
+
+    
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 AJR Media. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function navigateToExplore() {
+            alert("Explore feature coming soon!");
+            // Redirect to the desired page
+            window.location.href = "#";
+        }
+    </script>
+
+</body>
+</html>

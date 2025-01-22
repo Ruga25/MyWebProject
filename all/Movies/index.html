@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TV & Movie content platform, showcasing movies and videos.">
+    <meta name="keywords" content="movies, TV shows, film, entertainment, videos">
+    <meta name="author" content="Your Name or Company">
+    <meta property="og:title" content="Now Showing - MovieVerse">
+    <meta property="og:description" content="Explore the latest movies and TV shows.">
+    <meta property="og:image" content="URL-to-your-image">
+    <title>ajr.com - Movie & TV Showcase</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #292727;
+            color: #333;
+        }
+
+        header {
+            background-color: #201919;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f04e30;
+        }
+
+        #search-form {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        #search-query {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+        }
+
+        #search-form button {
+            padding: 10px 15px;
+            font-size: 1rem;
+            color: white;
+            background-color: #312f2f;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #search-form button:hover {
+            background-color: #d33b1f;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .movie-card {
+            background-color: rgb(73, 71, 71);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .movie-card video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .movie-card h3 {
+            font-size: 1.2rem;
+            color: #e2dcdc;
+            margin-bottom: 10px;
+        }
+
+        .movie-card p {
+            font-size: 0.9rem;
+            color: #faf0f0;
+        }
+
+        #no-results-message {
+            display: none;
+            text-align: center;
+            color: #f39c12;
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    <header>
+        <div class="logo">AJR</div>
+        <nav>
+            <ul>
+                <li><a href="/all/html/Home.html">Home</a></li>
+                <li><a href="/all/html/about.html">About</a></li>
+                <li><a href="/all/html/5_contactus.html">Contact</a></li>
+            </ul>
+        </nav>
+        <form id="search-form" action="#" method="get">
+            <input 
+                type="text" 
+                id="search-query" 
+                name="q" 
+                placeholder="Search Movies..." 
+            />
+            <button type="submit">Search</button>
+        </form>
+    </header>
+    
+    <div class="content">
+        <!-- Example Movie Cards -->
+        <div class="movie-card">
+            <video controls>
+                <source src="/movies/AJRuga1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>12th Fail</h3>
+            <a href="/movies/AJRuga-2.mkv" download="Moana_2.mp4" class="download-button">Download</a>
+        </div>
+
+        <div class="movie-card">
+            <video controls>
+                <source src="/movies/AJRuga-2.mkv" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>Moana 2</h3>
+            <a href="/movies/AJRuga-2.mkv" download="Moana_2.mp4" class="download-button">Download</a>
+        </div>
+
+        <div class="movie-card">
+            <video controls>
+                <source src="/movies/AJRuga3.mkv" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>Money (2019)</h3>
+            <a href="/movies/AJRuga-2.mkv" download="Moana_2.mp4" class="download-button">Download</a>
+        </div>
+
+
+        <div class="movie-card">
+            <video controls>
+                <source src="/movies/AJRuga4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>Tere Sang Ishq Hua</h3>
+            <a href="/movies/AJRuga-2.mkv" download="Moana_2.mp4" class="download-button">Download</a>
+        </div>
+
+        <div class="movie-card">
+            <video controls>
+                <source src="/movies/AJRuga5.mkv" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>The Founder</h3>
+            <a href="/movies/AJRuga-2.mkv" download="Moana_2.mp4" class="download-button">Download</a>
+        </div>
+
+        <div class="movie-card">
+            <video controls>
+                <source src="/movies/AJRuga6.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>Pushpa</h3>
+            <a href="/movies/AJRuga-2.mkv" download="Moana_2.mp4" class="download-button">Download</a>
+        </div>
+
+        <div class="movie-card">
+            <video controls>
+                <source src="/movies/AJRuga7.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>Lucky Baskhar (Hindi)</h3>
+            <a href="/movies/AJRuga-2.mkv" download="Moana_2.mp4" class="download-button">Download</a>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Repeat more movie cards as needed -->
+    </div>
+
+    <div id="no-results-message">
+        Ruga is here, be relax
+    </div>
+
+    <script>
+        // Event listener for search form submission
+        document.getElementById("search-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            var query = document.getElementById("search-query").value.toLowerCase();
+
+            // Loop through the content items and filter by the search query
+            var movieCards = document.querySelectorAll(".movie-card");
+            var found = false; // Flag to check if any results are found
+
+            movieCards.forEach(function(card) {
+                var title = card.querySelector("h3").textContent.toLowerCase();
+                if (title.includes(query)) {
+                    card.style.display = "block"; // Show matching card
+                    found = true;
+                } else {
+                    card.style.display = "none"; // Hide non-matching card
+                }
+            });
+
+            // If no results are found, display the message
+            var message = document.getElementById("no-results-message");
+            if (!found) {
+                message.style.display = "block";
+            } else {
+                message.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

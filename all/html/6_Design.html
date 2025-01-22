@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Design</title>
+
+
+
+
+
+
+
+
+    <style>
+        /* CSS for no-underline class */
+        .no-underline {
+            text-decoration: none; /* Removes default underline */
+            border-bottom: 2px solid rgb(86, 86, 92); /* Adds a blue bottom border */
+            color: rgb(13, 13, 14); /* Sets the text color */
+            padding-bottom: 2px; /* Adds spacing below the text for better alignment */
+        }
+
+        .no-underline:hover {
+            border-bottom: 2px solid darkblue; /* Changes border color on hover for effect */
+            color: darkblue; /* Optional: Darkens the text color on hover */
+        }
+    </style>
+
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2c2ba0;
+        }
+
+        header {
+            background-color: #2f9459;
+            padding: 20px;
+            text-align: center;
+            
+        }
+
+        .search-container {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .search-input {
+            padding: 10px;
+            font-size: 16px;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            background-color: #dce0dc;
+            color: rgb(19, 17, 17);
+            border: none;
+            cursor: pointer;
+        }
+
+        .search-button:hover {
+            background-color: #45a049;
+        }
+
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .movie-card {
+            border: 2px solid #54b690;
+            padding: 20px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .movie-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .no-results {
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+
+
+<!--Animation relax baba-->
+<style>
+.movie-card img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.movie-card img:hover {
+    transform: scale(1.1); /* Slightly zoom in */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+<header>
+    <h1>Designs</h1>
+    <p>Search for your favorite Designs from the list below.</p>
+</header>
+
+<div class="search-container">
+    <input type="text" id="search-input" class="search-input" placeholder="Search for a movie..." onkeyup="searchMovies()">
+    <button class="search-button" onclick="searchMovies()">Search</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="movie-grid" id="movie-grid">
+    
+    
+    <!-- Movie Cards -->
+    <div class="movie-card">
+        <img src="/all/pictures/B_gr1.png" alt="Movie Poster">
+        <a href="/all/html/myportfolio/1/project01.html" class="no-underline"><h3>Web Development</h3></a>
+        <p>The project is still in progress and has not been completed.</p>
+    </div>
+    <div class="movie-card">
+        <img src="/all/pictures/B_gr1.png" alt="Movie Poster">
+        <a href="/all/html/myportfolio/2/project02.html" class="no-underline"><h3>Software</h3></a>
+        <p>The project is still in progress and has not been completed.</p>
+    </div>
+    <div class="movie-card">
+        <img src="/all/pictures/B_gr1.png" alt="Movie Poster">
+        <a href="/all/html/myportfolio/3/project03.html" class="no-underline"><h3>Networking</h3></a>
+        <p>The project is still in progress and has not been completed.</p>
+    </div>
+    <div class="movie-card">
+        <img src="/all/pictures/B_gr1.png" alt="Movie Poster">
+        <a href="/all/html/myportfolio/4/project04.html" class="no-underline"><h3>Artificial Intelligence
+        </h3></a>
+        <p>The project is still in progress and has not been completed.</p>
+    </div>
+    <div class="movie-card">
+        <img src="/all/pictures/B_gr1.png" alt="Movie Poster">
+        <a href="/all/html/myportfolio/5/porject5.html" class="no-underline"><h3>Game Developer</h3></a>
+        <p>The project is still in progress and has not been completed.</p>
+    </div>
+    <div class="movie-card">
+        <img src="/all/pictures/B_gr1.png" alt="Movie Poster">
+        <a href="/all/html/myportfolio/6/porject6.html" class="no-underline"><h3>Culture Design</h3></a>
+        <p>The project is still in progress and has not been completed.</p>
+    </div>
+    <div class="movie-card">
+        <img src="/all/pictures/B_gr1.png" alt="Movie Poster">
+        <a href="/all/html/myportfolio/7/project7.html" class="no-underline"><h3>Animation Design</h3></a>
+        <p>The project is still in progress and has not been completed.</p>
+    </div>
+
+
+
+
+      
+        
+        <style>
+            /* General reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #338f5c;
+        color: #000000;
+    }
+    
+    /* Navbar Styles */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #36a06bdc;
+        color: #ffffff;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+    }
+    
+    .navbar .logo h1 {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+    
+    .navbar .nav-links {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+    }
+    
+    .navbar .nav-links li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        opacity: 0;
+        transform: translateY(-10px);
+        animation: fadeIn 0.6s ease forwards;
+    }
+    
+    .navbar .nav-links li a:nth-child(1) {
+        animation-delay: 0.2s;
+    }
+    
+    .navbar .nav-links li a:nth-child(2) {
+        animation-delay: 0.4s;
+    }
+    
+    .navbar .nav-links li a i {
+        margin-right: 8px; /* Space between icon and text */
+        font-size: 18px; /* Icon size */
+    }
+    
+    /* Hamburger Menu for Mobile */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+    }
+    
+    .menu-toggle span {
+        background-color: #fcf9f9;
+        height: 4px;
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    /* Mobile Responsive Styles */
+    @media (max-width: 768px) {
+        .navbar .nav-links {
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background-color: #36a06bdc;
+            flex-direction: column;
+            gap: 15px;
+            padding: 20px;
+            display: none;
+        }
+    
+        .navbar .nav-links.active {
+            display: flex;
+        }
+    
+        .menu-toggle {
+            display: flex;
+        }
+    
+        .navbar .nav-links li a {
+            font-size: 18px;
+        }
+    }
+    
+    /* Animation for Navbar Links */
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Header Section */
+    header {
+        margin-top: 80px;
+        text-align: center;
+        padding: 50px;
+    }
+    
+    header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+    
+    header p {
+        font-size: 1.2rem;
+        color: #000000;
+    }
+    
+        </style>
+    </head>
+    
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo">
+                <h1>AJR Designs</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/all/html/Home.html"><i class="fas fa-home"></i> Home</a></li> <!-- Home link -->
+                <li><a href="/all/html/5_contactus.html"><i class="fas fa-address-book"></i> Contact</a></li> <!-- Contact link -->
+                <li><a href="/all/html/about.html"><i class="fas fa-address-book"></i> About</a>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span><span></span><span></span> <!-- Hamburger icon -->
+            </div>
+        </nav>
+        
+    
+    <script>
+        // Hamburger Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    // Toggle the mobile menu when the hamburger is clicked
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+    
+    </script>
+
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+    <!-- More movie cards can be added here -->
+</section>
+
+<div id="no-results" class="no-results" style="display: none;">There is no designing here (AJR).</div>
+
+<script>
+    function searchMovies() {
+        const query = document.getElementById('search-input').value.toLowerCase();
+        const movies = document.querySelectorAll('.movie-card');
+        let found = false;
+
+        // Loop through each movie card
+        movies.forEach(movie => {
+            const title = movie.querySelector('h3').textContent.toLowerCase();
+            const description = movie.querySelector('p').textContent.toLowerCase();
+
+            // Check if either the title or description matches the query
+            if (title.includes(query) || description.includes(query)) {
+                movie.style.display = 'block'; // Show the movie card if it matches
+                found = true;
+            } else {
+                movie.style.display = 'none'; // Hide the movie card if it doesn't match
+            }
+        });
+
+        // Show message if no results were found
+        const noResults = document.getElementById('no-results');
+        if (!found) {
+            noResults.style.display = 'block';
+        } else {
+            noResults.style.display = 'none';
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
