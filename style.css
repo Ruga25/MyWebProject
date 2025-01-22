@@ -1,0 +1,122 @@
+ /* General Styles */
+ body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #417fc5; /* Fallback background */
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.hero div {
+    max-width: 1200px;
+    text-align: center;
+    color: #fff;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 600px; /* Adjust for larger screens */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 20px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    background: #fff;
+    color: #f04e30;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.hero button:hover {
+    background: #f04e30;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) { /* Laptops */
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .hero button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 768px) { /* Tablets */
+    .hero img {
+        max-width: 400px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+
+@media screen and (max-width: 480px) { /* Phones */
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero img {
+        max-width: 300px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero button {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
